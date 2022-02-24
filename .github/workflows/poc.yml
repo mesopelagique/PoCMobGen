@@ -1,0 +1,15 @@
+name: poc
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run
+        run: |
+          project=$(find Project -name "*.4DProject" | head -1)
+          options="" # for instance {\"typeInference\": \"none\"} 
+          curl -fsSL https://raw.githubusercontent.com/mesopelagique/MobileBuildCmd/main/run.sh | bash -s ${{ secrets.SERVER_URL }} "$project" "$options"
