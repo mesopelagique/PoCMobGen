@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="PoCMobGen" uuid="4138447B3E5E4716A6CF5770697ED6B2" collation_locale="en-gb">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Table_1" uuid="C3CB909C33844C26BB4B75A51435B06B" id="1">
+		<field name="ID" uuid="2BFC6946C26840EB8992376E87A05DE4" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_2" uuid="6306BC924CB947448B02D849000D7349" type="10" limiting_length="255" id="2"/>
+		<field name="Field_3" uuid="A471EA5FE97349C6BFE4BA6CEC483754" type="10" limiting_length="255" id="3"/>
+		<primary_key field_name="ID" field_uuid="2BFC6946C26840EB8992376E87A05DE4"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Table_2" uuid="95CC6FCCB424447C853E67806F9E9754" id="2">
+		<field name="ID" uuid="91EC4AA5BBC44C9FA18CDB4D41FDAFF8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_2" uuid="6BF1C4325D7C42AF9FCC7BD96B0DABBD" type="10" limiting_length="255" id="2"/>
+		<field name="Field_3" uuid="53B1465548424049B4C09FFAB11E22C9" type="1" id="3"/>
+		<field name="Field_4" uuid="92E8F1887ECF42F1BC7F09A92BBA07C2" type="10" limiting_length="255" id="4"/>
+		<field name="Field_5" uuid="D574AD2B537D4A609FBD070404AF490D" type="10" limiting_length="255" id="5"/>
+		<primary_key field_name="ID" field_uuid="91EC4AA5BBC44C9FA18CDB4D41FDAFF8"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="240" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Table_3" uuid="DC157426E27D40E1B7751B414F3FA3A5" id="3">
+		<field name="ID" uuid="56F3EE3063A047BE9C51E33753CEEAA5" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_2" uuid="4F2C7B4D6E064A6998DB0E0E1FDC1D08" type="10" limiting_length="255" id="2"/>
+		<primary_key field_name="ID" field_uuid="56F3EE3063A047BE9C51E33753CEEAA5"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="440" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="232A10C780D44CB2A54289700AE783C0" type="7">
+		<field_ref uuid="91EC4AA5BBC44C9FA18CDB4D41FDAFF8" name="ID">
+			<table_ref uuid="95CC6FCCB424447C853E67806F9E9754" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="4140C57738F64FF6B9A273C99D6FB45A" type="7">
+		<field_ref uuid="2BFC6946C26840EB8992376E87A05DE4" name="ID">
+			<table_ref uuid="C3CB909C33844C26BB4B75A51435B06B" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EFC0D0989C554155BCF5BA90C0F52FA2" type="7">
+		<field_ref uuid="56F3EE3063A047BE9C51E33753CEEAA5" name="ID">
+			<table_ref uuid="DC157426E27D40E1B7751B414F3FA3A5" name="Table_3"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
